@@ -2,3 +2,6 @@
     path = fin
     url = https://github.com/ROCm/MIFin.git
     branch = develop
+[submodule "tart"]
+	path = tart
+	url = https://codeberg.org/softcookiepp/tart.git
