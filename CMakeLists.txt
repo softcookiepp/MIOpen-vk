@@ -68,7 +68,7 @@ endif()
 
 # Default installation path
 if(NOT WIN32)
-    set(CMAKE_INSTALL_PREFIX "/opt/rocm" CACHE PATH "")
+    #set(CMAKE_INSTALL_PREFIX "/opt/rocm" CACHE PATH "")
 endif()
 
 project ( MIOpen C CXX )
@@ -80,15 +80,15 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 include(CTest)
 
 find_package(Threads REQUIRED)
-find_package(ROCM 0.7.3 REQUIRED PATHS /opt/rocm)
+#find_package(ROCM 0.7.3 REQUIRED PATHS /opt/rocm)
 
-include(ROCMInstallTargets)
-include(ROCMPackageConfigHelpers)
-include(ROCMSetupVersion)
-include(ROCMInstallSymlinks)
-include(ROCMCreatePackage)
+#include(ROCMInstallTargets)
+#include(ROCMPackageConfigHelpers)
+#include(ROCMSetupVersion)
+#include(ROCMInstallSymlinks)
+#include(ROCMCreatePackage)
 include(CheckCXXCompilerFlag)
-include(ROCMHeaderWrapper)
+#include(ROCMHeaderWrapper)
 
 include(cmake/ClangCheck.cmake)
 
@@ -149,7 +149,8 @@ check_cxx_compiler_flag("--cuda-host-only -x hip" HAS_HIP)
 if(HAS_HIP)
     set(MIOPEN_DEFAULT_BACKEND "HIP")
 else()
-    set(MIOPEN_DEFAULT_BACKEND "OpenCL")
+    #set(MIOPEN_DEFAULT_BACKEND "OpenCL")
+    set(MIOPEN_DEFAULT_BACKEND "Vulkan")
 endif()
 
 if(NOT WIN32 AND NOT MIOPEN_WORKAROUND_USE_BOOST_FILESYSTEM)
@@ -157,7 +158,7 @@ if(NOT WIN32 AND NOT MIOPEN_WORKAROUND_USE_BOOST_FILESYSTEM)
     check_cxx_linker_flag(-lstdc++fs HAS_LIB_STD_FILESYSTEM)
 endif()
 
-list(APPEND CMAKE_PREFIX_PATH ${CMAKE_INSTALL_PREFIX} ${CMAKE_INSTALL_PREFIX}/llvm ${CMAKE_INSTALL_PREFIX}/hip /opt/rocm /opt/rocm/llvm /opt/rocm/hip)
+#list(APPEND CMAKE_PREFIX_PATH ${CMAKE_INSTALL_PREFIX} ${CMAKE_INSTALL_PREFIX}/llvm ${CMAKE_INSTALL_PREFIX}/hip /opt/rocm /opt/rocm/llvm /opt/rocm/hip)
 
 option(ENABLE_HIP_WORKAROUNDS Off)
 set(MIOPEN_INSTALL_CXX_HEADERS Off CACHE BOOL "Install MIOpen's C++ header interface")
@@ -200,7 +201,7 @@ endif()
 set( MIOPEN_BACKEND ${MIOPEN_DEFAULT_BACKEND} CACHE STRING
     "Which of MIOpens's backends to use?" )
 set_property( CACHE MIOPEN_BACKEND PROPERTY STRINGS
-    OpenCL HIP HIPOC HIPNOGPU)
+    Vulkan OpenCL HIP HIPOC HIPNOGPU)
 
 set_var_to_condition(MIOPEN_BUILD_DRIVER_DEFAULT (NOT MIOPEN_EMBED_BUILD) AND (NOT (MIOPEN_BACKEND STREQUAL "HIPNOGPU")))
 option(MIOPEN_BUILD_DRIVER "Build MIOpenDriver (and use it in tests)" ${MIOPEN_BUILD_DRIVER_DEFAULT})
@@ -231,6 +232,8 @@ if( MIOPEN_BACKEND STREQUAL "OpenCL")
     # for device code compilation. Used within "find_package(hip...".
     # See https://github.com/ROCm-Developer-Tools/HIP/pull/2035#issuecomment-616861118.
     set (HIP_CXX_COMPILER ${MIOPEN_HIP_COMPILER})
+elseif( MIOPEN_BACKEND STREQUAL "OpenCL" )
+	# Vulkan stuff
 endif()
 
 # HIP SDK on Windows does not detect platform correctly, defaulting to "amd"
@@ -239,8 +242,8 @@ if(NOT HIP_PLATFORM AND CMAKE_SYSTEM_NAME STREQUAL "Windows")
 endif()
 
 # HIP is always required
-find_package(hip REQUIRED PATHS /opt/rocm)
-message(STATUS "Build with HIP ${hip_VERSION} ${hip_DIR}")
+#find_package(hip REQUIRED PATHS /opt/rocm)
+#message(STATUS "Build with HIP ${hip_VERSION} ${hip_DIR}")
 
 # Override HIP version in config.h, if necessary.
 # The variables set by find_package() can't be overwritten,
@@ -355,7 +358,7 @@ if( MIOPEN_BACKEND STREQUAL "HIP" OR MIOPEN_BACKEND STREQUAL "HIPOC" OR MIOPEN_B
     find_program(HIP_OC_COMPILER NAMES amdclang clang
         PATH_SUFFIXES bin
         PATHS
-            /opt/rocm
+            #/opt/rocm
             ${CMAKE_INSTALL_PREFIX}
         ENV HIP_PATH
     )
@@ -405,7 +408,7 @@ if(MIOPEN_HIP_COMPILER MATCHES ".*clang\\+\\+.*")
     find_program(MIOPEN_OFFLOADBUNDLER_BIN clang-offload-bundler
         PATH_SUFFIXES bin
         PATHS
-            /opt/rocm/llvm
+            #/opt/rocm/llvm
             ${CMAKE_INSTALL_PREFIX}/llvm
     )
 endif()
@@ -460,8 +463,8 @@ find_program(MIOPEN_AMDGCN_ASSEMBLER
     NAMES clang
     PATHS
         ${MIOPEN_AMDGCN_ASSEMBLER_PATH}
-        /opt/rocm
-        /opt/rocm/llvm
+        #/opt/rocm
+        #/opt/rocm/llvm
         ${CMAKE_INSTALL_PREFIX}
         ${CMAKE_INSTALL_PREFIX}/llvm
     PATH_SUFFIXES
@@ -703,13 +706,13 @@ if(NOT MIOPEN_TEST_DISCRETE)
 list(APPEND CPACK_COMPONENTS_ALL clients)
 endif()
 
-rocm_create_package(
-    NAME MIOpen-${MIOPEN_BACKEND}
-    DESCRIPTION "AMD DNN Library"
-    MAINTAINER "MIOpen Maintainer <miopen-lib.support@amd.com>"
-    LDCONFIG
-    # DEPENDS rocm-opencl hip-rocclr tinygemm
-)
+#rocm_create_package(
+#    NAME MIOpen-${MIOPEN_BACKEND}
+#    DESCRIPTION "AMD DNN Library"
+#    MAINTAINER "MIOpen Maintainer <miopen-lib.support@amd.com>"
+#    LDCONFIG
+#    # DEPENDS rocm-opencl hip-rocclr tinygemm
+#)
 
 include(EnableCompilerWarnings)
 set(MIOPEN_TIDY_ERRORS ERRORS * -readability-inconsistent-declaration-parameter-name)
