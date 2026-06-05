@@ -14,8 +14,23 @@
 # EXTERNAL cache entries
 ########################
 
+//Build for development only
+BUILD_DEV:BOOL=OFF
+
+//Create shared libraries
+BUILD_SHARED_LIBS:BOOL=ON
+
 //Build the testing tree.
 BUILD_TESTING:BOOL=ON
+
+//Path to a file.
+BZIP2_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+BZIP2_LIBRARY_DEBUG:FILEPATH=BZIP2_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+BZIP2_LIBRARY_RELEASE:FILEPATH=/usr/lib/libbz2.so
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
@@ -31,7 +46,7 @@ CMAKE_BUILD_TYPE:STRING=Release
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:STRING=/usr/bin/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -57,7 +72,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+CMAKE_C_COMPILER:STRING=/usr/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -239,8 +254,14 @@ CTEST_SUBMIT_RETRY_DELAY:STRING=5
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
+//Off
+ENABLE_HIP_WORKAROUNDS:BOOL=OFF
+
 //Path to a program.
 GITCOMMAND:FILEPATH=/usr/bin/git
+
+//Path to a program.
+HIP_OC_COMPILER:FILEPATH=/usr/bin/clang
 
 //Command to build the project
 MAKECOMMAND:STRING=/usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
@@ -251,8 +272,84 @@ MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 //File that contains suppressions for the memory checker
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
-//No help, variable specified on the command line.
-MIOPEN_BACKEND:UNINITIALIZED=HIPNOGPU
+//Which of MIOpens's backends to use?
+MIOPEN_BACKEND:STRING=HIPNOGPU
+
+//URL or path containing binary cache files to embed
+MIOPEN_BINCACHE_PATH:STRING=
+
+//Build own CK libs inline with MIOpen build
+MIOPEN_BUILD_CK:BOOL=OFF
+
+//Build MIOpenDriver (and use it in tests)
+MIOPEN_BUILD_DRIVER:BOOL=OFF
+
+//Disable sys database access
+MIOPEN_DISABLE_SYSDB:BOOL=OFF
+
+//Disable user database access
+MIOPEN_DISABLE_USERDB:BOOL=OFF
+
+//Embed Binary Cache or KDB
+MIOPEN_EMBED_BINCACHE:BOOL=OFF
+
+//Build with the set of embed flags.
+MIOPEN_EMBED_BUILD:BOOL=OFF
+
+//Semi-colon separated list of architecture to embed on-disk DBs
+// in the binary. Example gfx906_60;gfx900_56
+MIOPEN_EMBED_DB:STRING=
+
+//Enable AI-based fallback for Immediate Mode
+MIOPEN_ENABLE_AI_IMMED_MODE_FALLBACK:BOOL=On
+
+//Enable AI heuristic for kernel tuning
+MIOPEN_ENABLE_AI_KERNEL_TUNING:BOOL=On
+
+//Enable the fin driver for MIOpen
+MIOPEN_ENABLE_FIN:BOOL=OFF
+
+//Enable internal interface for the fin
+MIOPEN_ENABLE_FIN_INTERFACE:BOOL=OFF
+
+MIOPEN_ENABLE_SQLITE:BOOL=On
+
+MIOPEN_ENABLE_SQLITE_BACKOFF:BOOL=On
+
+MIOPEN_ENABLE_SQLITE_KERN_CACHE:BOOL=On
+
+MIOPEN_HIP_COMPILER:PATH=/usr/bin/c++
+
+//Append include directories to compiler flags
+MIOPEN_HIP_COMPILER_USE_SYSTEM_INCLUDE_DIRECTORIES:BOOL=ON
+
+//Install MIOpen's C++ header interface
+MIOPEN_INSTALL_CXX_HEADERS:BOOL=Off
+
+MIOPEN_LOG_FUNC_TIME_ENABLE:BOOL=Off
+
+//Use rocm-core to find offline GPU compiler
+MIOPEN_OFFLINE_COMPILER_PATHS_V2:BOOL=OFF
+
+//Strip symbols in release mode
+MIOPEN_STRIP_SYMBOLS:BOOL=ON
+
+//Use comgr to build kernels instead of offline tools
+MIOPEN_USE_COMGR:BOOL=OFF
+
+//Enable MIOpen to use composable kernels for various operations
+MIOPEN_USE_COMPOSABLEKERNEL:BOOL=ON
+
+//Use HIPRTC to build HIP kernels instead of COMGR
+MIOPEN_USE_HIPRTC:BOOL=OFF
+
+//Use HIP kernels.
+MIOPEN_USE_HIP_KERNELS:BOOL=ON
+
+MIOPEN_USE_ROCBLAS:BOOL=ON
+
+//Workaround: Use boost::filesystem instead of std::filesystem
+MIOPEN_WORKAROUND_USE_BOOST_FILESYSTEM:BOOL=OFF
 
 //Value Computed by CMake
 MIOpen_BINARY_DIR:STATIC=/home/me/development/MIOpen-vk
@@ -263,17 +360,49 @@ MIOpen_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 MIOpen_SOURCE_DIR:STATIC=/home/me/development/MIOpen-vk
 
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //The directory containing a CMake configuration file for ROCM.
 ROCM_DIR:PATH=ROCM_DIR-NOTFOUND
 
 //Name of the computer/site where compile is being run
 SITE:STRING=me-portable
 
+//Path to a file.
+SQLite3_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+SQLite3_LIBRARY:FILEPATH=/usr/lib/libsqlite3.so
+
+//The directory containing a CMake configuration file for composable_kernel.
+composable_kernel_DIR:PATH=composable_kernel_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for nlohmann_json.
+nlohmann_json_DIR:PATH=/usr/share/cmake/nlohmann_json
+
+//Path to a library.
+pkgcfg_lib_PC_SQLite3_sqlite3:FILEPATH=/usr/lib/libsqlite3.so
+
+//The directory containing a CMake configuration file for rocblas.
+rocblas_DIR:PATH=rocblas_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: BZIP2_INCLUDE_DIR
+BZIP2_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BZIP2_LIBRARY_DEBUG
+BZIP2_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BZIP2_LIBRARY_RELEASE
+BZIP2_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//Have symbol BZ2_bzCompressInit
+BZIP2_NEED_PREFIX:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -437,16 +566,76 @@ CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding BZip2
+FIND_PACKAGE_MESSAGE_DETAILS_BZip2:INTERNAL=[/usr/lib/libbz2.so][/usr/include][v1.0.8()]
+//Details about finding SQLite3
+FIND_PACKAGE_MESSAGE_DETAILS_SQLite3:INTERNAL=[/usr/lib/libsqlite3.so][/usr/include][v3.53.1()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding nlohmann_json
+FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[/usr/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake][v3.12.0(3.9.1)]
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
+//Test HAS_HIP
+HAS_HIP:INTERNAL=
 //ADVANCED property for variable: MAKECOMMAND
 MAKECOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_COMMAND
 MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
+//STRINGS property for variable: MIOPEN_BACKEND
+MIOPEN_BACKEND-STRINGS:INTERNAL=Vulkan;OpenCL;HIP;HIPOC;HIPNOGPU
+PC_SQLite3_CFLAGS:INTERNAL=-I/usr/include
+PC_SQLite3_CFLAGS_I:INTERNAL=
+PC_SQLite3_CFLAGS_OTHER:INTERNAL=
+PC_SQLite3_FOUND:INTERNAL=1
+PC_SQLite3_INCLUDEDIR:INTERNAL=/usr/include
+PC_SQLite3_INCLUDE_DIRS:INTERNAL=/usr/include
+PC_SQLite3_LDFLAGS:INTERNAL=-L/usr/lib;-lsqlite3
+PC_SQLite3_LDFLAGS_OTHER:INTERNAL=
+PC_SQLite3_LIBDIR:INTERNAL=/usr/lib
+PC_SQLite3_LIBRARIES:INTERNAL=sqlite3
+PC_SQLite3_LIBRARY_DIRS:INTERNAL=/usr/lib
+PC_SQLite3_LIBS:INTERNAL=
+PC_SQLite3_LIBS_L:INTERNAL=
+PC_SQLite3_LIBS_OTHER:INTERNAL=
+PC_SQLite3_LIBS_PATHS:INTERNAL=
+PC_SQLite3_MODULE_NAME:INTERNAL=sqlite3
+PC_SQLite3_PREFIX:INTERNAL=/usr
+PC_SQLite3_STATIC_CFLAGS:INTERNAL=-I/usr/include
+PC_SQLite3_STATIC_CFLAGS_I:INTERNAL=
+PC_SQLite3_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_SQLite3_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include
+PC_SQLite3_STATIC_LDFLAGS:INTERNAL=-L/usr/lib;-lsqlite3;-lm;-lz
+PC_SQLite3_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_SQLite3_STATIC_LIBDIR:INTERNAL=
+PC_SQLite3_STATIC_LIBRARIES:INTERNAL=sqlite3;m;z
+PC_SQLite3_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib
+PC_SQLite3_STATIC_LIBS:INTERNAL=
+PC_SQLite3_STATIC_LIBS_L:INTERNAL=
+PC_SQLite3_STATIC_LIBS_OTHER:INTERNAL=
+PC_SQLite3_STATIC_LIBS_PATHS:INTERNAL=
+PC_SQLite3_VERSION:INTERNAL=3.53.1
+PC_SQLite3_sqlite3_INCLUDEDIR:INTERNAL=
+PC_SQLite3_sqlite3_LIBDIR:INTERNAL=
+PC_SQLite3_sqlite3_PREFIX:INTERNAL=
+PC_SQLite3_sqlite3_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SQLite3_INCLUDE_DIR
+SQLite3_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SQLite3_LIBRARY
+SQLite3_LIBRARY-ADVANCED:INTERNAL=1
+//Test _HAS_LIB_STD_FILESYSTEM
+_HAS_LIB_STD_FILESYSTEM:INTERNAL=1
+__pkg_config_arguments_PC_SQLite3:INTERNAL=QUIET;sqlite3
+__pkg_config_checked_PC_SQLite3:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_PC_SQLite3_sqlite3
+pkgcfg_lib_PC_SQLite3_sqlite3-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib
 

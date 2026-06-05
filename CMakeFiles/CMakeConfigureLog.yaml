@@ -2,196 +2,12 @@
 ---
 events:
   -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_UNAME"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "uname"
-    candidate_directories:
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    searched_directories:
-      - "/home/me/.local/lib/uname"
-      - "/home/me/.local/bin/uname"
-      - "/home/me/miniforge3/condabin/uname"
-      - "/usr/local/bin/uname"
-    found: "/usr/bin/uname"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
     kind: "message-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
       - "CMakeLists.txt:74 (project)"
     message: |
       The system is: Linux - 6.18.32-1-lts - x86_64
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_MAKE_PROGRAM"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "gmake"
-      - "make"
-      - "smake"
-    candidate_directories:
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    searched_directories:
-      - "/home/me/.local/lib/gmake"
-      - "/home/me/.local/bin/gmake"
-      - "/home/me/miniforge3/condabin/gmake"
-      - "/usr/local/bin/gmake"
-      - "/usr/bin/gmake"
-      - "/bin/gmake"
-      - "/usr/local/sbin/gmake"
-      - "/var/lib/flatpak/exports/bin/gmake"
-      - "/usr/lib/jvm/default/bin/gmake"
-      - "/usr/bin/site_perl/gmake"
-      - "/usr/bin/vendor_perl/gmake"
-      - "/usr/bin/core_perl/gmake"
-      - "/usr/lib/rustup/bin/gmake"
-      - "/home/me/.local/lib/make"
-      - "/home/me/.local/bin/make"
-      - "/home/me/miniforge3/condabin/make"
-      - "/usr/local/bin/make"
-    found: "/usr/bin/make"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_C_COMPILER"
-    description: "C compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "cc"
-      - "gcc"
-      - "cl"
-      - "bcc"
-      - "xlc"
-      - "icx"
-      - "clang"
-    candidate_directories:
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    searched_directories:
-      - "/home/me/.local/lib/cc"
-      - "/home/me/.local/bin/cc"
-      - "/home/me/miniforge3/condabin/cc"
-      - "/usr/local/bin/cc"
-    found: "/usr/bin/cc"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
   -
     kind: "find-v1"
     backtrace:
@@ -258,817 +74,6 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_AR"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "ar"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    found: "/usr/bin/ar"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_RANLIB"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "ranlib"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    found: "/usr/bin/ranlib"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_STRIP"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "strip"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    found: "/usr/bin/strip"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_LINKER"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "ld"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    found: "/usr/bin/ld"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_NM"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "nm"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    found: "/usr/bin/nm"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_OBJDUMP"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "objdump"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    found: "/usr/bin/objdump"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_OBJCOPY"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "objcopy"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    found: "/usr/bin/objcopy"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_READELF"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "readelf"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    found: "/usr/bin/readelf"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_DLLTOOL"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "dlltool"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    searched_directories:
-      - "/usr/bin/dlltool"
-      - "/home/me/.local/lib/dlltool"
-      - "/home/me/.local/bin/dlltool"
-      - "/home/me/miniforge3/condabin/dlltool"
-      - "/usr/local/bin/dlltool"
-      - "/bin/dlltool"
-      - "/usr/local/sbin/dlltool"
-      - "/var/lib/flatpak/exports/bin/dlltool"
-      - "/usr/lib/jvm/default/bin/dlltool"
-      - "/usr/bin/site_perl/dlltool"
-      - "/usr/bin/vendor_perl/dlltool"
-      - "/usr/bin/core_perl/dlltool"
-      - "/usr/lib/rustup/bin/dlltool"
-    found: false
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_ADDR2LINE"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "addr2line"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    found: "/usr/bin/addr2line"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_TAPI"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "tapi"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    searched_directories:
-      - "/usr/bin/tapi"
-      - "/home/me/.local/lib/tapi"
-      - "/home/me/.local/bin/tapi"
-      - "/home/me/miniforge3/condabin/tapi"
-      - "/usr/local/bin/tapi"
-      - "/bin/tapi"
-      - "/usr/local/sbin/tapi"
-      - "/var/lib/flatpak/exports/bin/tapi"
-      - "/usr/lib/jvm/default/bin/tapi"
-      - "/usr/bin/site_perl/tapi"
-      - "/usr/bin/vendor_perl/tapi"
-      - "/usr/bin/core_perl/tapi"
-      - "/usr/lib/rustup/bin/tapi"
-    found: false
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_C_COMPILER_AR"
-    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "gcc-ar-16.1"
-      - "gcc-ar-16"
-      - "gcc-ar16"
-      - "gcc-ar"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    searched_directories:
-      - "/usr/bin/gcc-ar-16.1"
-      - "/home/me/.local/lib/gcc-ar-16.1"
-      - "/home/me/.local/bin/gcc-ar-16.1"
-      - "/home/me/miniforge3/condabin/gcc-ar-16.1"
-      - "/usr/local/bin/gcc-ar-16.1"
-      - "/bin/gcc-ar-16.1"
-      - "/usr/local/sbin/gcc-ar-16.1"
-      - "/var/lib/flatpak/exports/bin/gcc-ar-16.1"
-      - "/usr/lib/jvm/default/bin/gcc-ar-16.1"
-      - "/usr/bin/site_perl/gcc-ar-16.1"
-      - "/usr/bin/vendor_perl/gcc-ar-16.1"
-      - "/usr/bin/core_perl/gcc-ar-16.1"
-      - "/usr/lib/rustup/bin/gcc-ar-16.1"
-      - "/usr/bin/gcc-ar-16"
-      - "/home/me/.local/lib/gcc-ar-16"
-      - "/home/me/.local/bin/gcc-ar-16"
-      - "/home/me/miniforge3/condabin/gcc-ar-16"
-      - "/usr/local/bin/gcc-ar-16"
-      - "/bin/gcc-ar-16"
-      - "/usr/local/sbin/gcc-ar-16"
-      - "/var/lib/flatpak/exports/bin/gcc-ar-16"
-      - "/usr/lib/jvm/default/bin/gcc-ar-16"
-      - "/usr/bin/site_perl/gcc-ar-16"
-      - "/usr/bin/vendor_perl/gcc-ar-16"
-      - "/usr/bin/core_perl/gcc-ar-16"
-      - "/usr/lib/rustup/bin/gcc-ar-16"
-      - "/usr/bin/gcc-ar16"
-      - "/home/me/.local/lib/gcc-ar16"
-      - "/home/me/.local/bin/gcc-ar16"
-      - "/home/me/miniforge3/condabin/gcc-ar16"
-      - "/usr/local/bin/gcc-ar16"
-      - "/bin/gcc-ar16"
-      - "/usr/local/sbin/gcc-ar16"
-      - "/var/lib/flatpak/exports/bin/gcc-ar16"
-      - "/usr/lib/jvm/default/bin/gcc-ar16"
-      - "/usr/bin/site_perl/gcc-ar16"
-      - "/usr/bin/vendor_perl/gcc-ar16"
-      - "/usr/bin/core_perl/gcc-ar16"
-      - "/usr/lib/rustup/bin/gcc-ar16"
-    found: "/usr/bin/gcc-ar"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_C_COMPILER_RANLIB"
-    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "gcc-ranlib-16.1"
-      - "gcc-ranlib-16"
-      - "gcc-ranlib16"
-      - "gcc-ranlib"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    searched_directories:
-      - "/usr/bin/gcc-ranlib-16.1"
-      - "/home/me/.local/lib/gcc-ranlib-16.1"
-      - "/home/me/.local/bin/gcc-ranlib-16.1"
-      - "/home/me/miniforge3/condabin/gcc-ranlib-16.1"
-      - "/usr/local/bin/gcc-ranlib-16.1"
-      - "/bin/gcc-ranlib-16.1"
-      - "/usr/local/sbin/gcc-ranlib-16.1"
-      - "/var/lib/flatpak/exports/bin/gcc-ranlib-16.1"
-      - "/usr/lib/jvm/default/bin/gcc-ranlib-16.1"
-      - "/usr/bin/site_perl/gcc-ranlib-16.1"
-      - "/usr/bin/vendor_perl/gcc-ranlib-16.1"
-      - "/usr/bin/core_perl/gcc-ranlib-16.1"
-      - "/usr/lib/rustup/bin/gcc-ranlib-16.1"
-      - "/usr/bin/gcc-ranlib-16"
-      - "/home/me/.local/lib/gcc-ranlib-16"
-      - "/home/me/.local/bin/gcc-ranlib-16"
-      - "/home/me/miniforge3/condabin/gcc-ranlib-16"
-      - "/usr/local/bin/gcc-ranlib-16"
-      - "/bin/gcc-ranlib-16"
-      - "/usr/local/sbin/gcc-ranlib-16"
-      - "/var/lib/flatpak/exports/bin/gcc-ranlib-16"
-      - "/usr/lib/jvm/default/bin/gcc-ranlib-16"
-      - "/usr/bin/site_perl/gcc-ranlib-16"
-      - "/usr/bin/vendor_perl/gcc-ranlib-16"
-      - "/usr/bin/core_perl/gcc-ranlib-16"
-      - "/usr/lib/rustup/bin/gcc-ranlib-16"
-      - "/usr/bin/gcc-ranlib16"
-      - "/home/me/.local/lib/gcc-ranlib16"
-      - "/home/me/.local/bin/gcc-ranlib16"
-      - "/home/me/miniforge3/condabin/gcc-ranlib16"
-      - "/usr/local/bin/gcc-ranlib16"
-      - "/bin/gcc-ranlib16"
-      - "/usr/local/sbin/gcc-ranlib16"
-      - "/var/lib/flatpak/exports/bin/gcc-ranlib16"
-      - "/usr/lib/jvm/default/bin/gcc-ranlib16"
-      - "/usr/bin/site_perl/gcc-ranlib16"
-      - "/usr/bin/vendor_perl/gcc-ranlib16"
-      - "/usr/bin/core_perl/gcc-ranlib16"
-      - "/usr/lib/rustup/bin/gcc-ranlib16"
-    found: "/usr/bin/gcc-ranlib"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_CXX_COMPILER"
-    description: "CXX compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "c++"
-      - "CC"
-      - "g++"
-      - "aCC"
-      - "cl"
-      - "bcc"
-      - "xlC"
-      - "icpx"
-      - "icx"
-      - "clang++"
-    candidate_directories:
-      - "/usr/bin/"
-    found: "/usr/bin/c++"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
@@ -1130,192 +135,6 @@ events:
         /home/me/development/MIOpen-vk/CMakeFiles/4.3.2/CompilerIdCXX/a.out
       
   -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_CXX_COMPILER_AR"
-    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "gcc-ar-16.1"
-      - "gcc-ar-16"
-      - "gcc-ar16"
-      - "gcc-ar"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    searched_directories:
-      - "/usr/bin/gcc-ar-16.1"
-      - "/home/me/.local/lib/gcc-ar-16.1"
-      - "/home/me/.local/bin/gcc-ar-16.1"
-      - "/home/me/miniforge3/condabin/gcc-ar-16.1"
-      - "/usr/local/bin/gcc-ar-16.1"
-      - "/bin/gcc-ar-16.1"
-      - "/usr/local/sbin/gcc-ar-16.1"
-      - "/var/lib/flatpak/exports/bin/gcc-ar-16.1"
-      - "/usr/lib/jvm/default/bin/gcc-ar-16.1"
-      - "/usr/bin/site_perl/gcc-ar-16.1"
-      - "/usr/bin/vendor_perl/gcc-ar-16.1"
-      - "/usr/bin/core_perl/gcc-ar-16.1"
-      - "/usr/lib/rustup/bin/gcc-ar-16.1"
-      - "/usr/bin/gcc-ar-16"
-      - "/home/me/.local/lib/gcc-ar-16"
-      - "/home/me/.local/bin/gcc-ar-16"
-      - "/home/me/miniforge3/condabin/gcc-ar-16"
-      - "/usr/local/bin/gcc-ar-16"
-      - "/bin/gcc-ar-16"
-      - "/usr/local/sbin/gcc-ar-16"
-      - "/var/lib/flatpak/exports/bin/gcc-ar-16"
-      - "/usr/lib/jvm/default/bin/gcc-ar-16"
-      - "/usr/bin/site_perl/gcc-ar-16"
-      - "/usr/bin/vendor_perl/gcc-ar-16"
-      - "/usr/bin/core_perl/gcc-ar-16"
-      - "/usr/lib/rustup/bin/gcc-ar-16"
-      - "/usr/bin/gcc-ar16"
-      - "/home/me/.local/lib/gcc-ar16"
-      - "/home/me/.local/bin/gcc-ar16"
-      - "/home/me/miniforge3/condabin/gcc-ar16"
-      - "/usr/local/bin/gcc-ar16"
-      - "/bin/gcc-ar16"
-      - "/usr/local/sbin/gcc-ar16"
-      - "/var/lib/flatpak/exports/bin/gcc-ar16"
-      - "/usr/lib/jvm/default/bin/gcc-ar16"
-      - "/usr/bin/site_perl/gcc-ar16"
-      - "/usr/bin/vendor_perl/gcc-ar16"
-      - "/usr/bin/core_perl/gcc-ar16"
-      - "/usr/lib/rustup/bin/gcc-ar16"
-    found: "/usr/bin/gcc-ar"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:74 (project)"
-    mode: "program"
-    variable: "CMAKE_CXX_COMPILER_RANLIB"
-    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "gcc-ranlib-16.1"
-      - "gcc-ranlib-16"
-      - "gcc-ranlib16"
-      - "gcc-ranlib"
-    candidate_directories:
-      - "/usr/bin/"
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-    searched_directories:
-      - "/usr/bin/gcc-ranlib-16.1"
-      - "/home/me/.local/lib/gcc-ranlib-16.1"
-      - "/home/me/.local/bin/gcc-ranlib-16.1"
-      - "/home/me/miniforge3/condabin/gcc-ranlib-16.1"
-      - "/usr/local/bin/gcc-ranlib-16.1"
-      - "/bin/gcc-ranlib-16.1"
-      - "/usr/local/sbin/gcc-ranlib-16.1"
-      - "/var/lib/flatpak/exports/bin/gcc-ranlib-16.1"
-      - "/usr/lib/jvm/default/bin/gcc-ranlib-16.1"
-      - "/usr/bin/site_perl/gcc-ranlib-16.1"
-      - "/usr/bin/vendor_perl/gcc-ranlib-16.1"
-      - "/usr/bin/core_perl/gcc-ranlib-16.1"
-      - "/usr/lib/rustup/bin/gcc-ranlib-16.1"
-      - "/usr/bin/gcc-ranlib-16"
-      - "/home/me/.local/lib/gcc-ranlib-16"
-      - "/home/me/.local/bin/gcc-ranlib-16"
-      - "/home/me/miniforge3/condabin/gcc-ranlib-16"
-      - "/usr/local/bin/gcc-ranlib-16"
-      - "/bin/gcc-ranlib-16"
-      - "/usr/local/sbin/gcc-ranlib-16"
-      - "/var/lib/flatpak/exports/bin/gcc-ranlib-16"
-      - "/usr/lib/jvm/default/bin/gcc-ranlib-16"
-      - "/usr/bin/site_perl/gcc-ranlib-16"
-      - "/usr/bin/vendor_perl/gcc-ranlib-16"
-      - "/usr/bin/core_perl/gcc-ranlib-16"
-      - "/usr/lib/rustup/bin/gcc-ranlib-16"
-      - "/usr/bin/gcc-ranlib16"
-      - "/home/me/.local/lib/gcc-ranlib16"
-      - "/home/me/.local/bin/gcc-ranlib16"
-      - "/home/me/miniforge3/condabin/gcc-ranlib16"
-      - "/usr/local/bin/gcc-ranlib16"
-      - "/bin/gcc-ranlib16"
-      - "/usr/local/sbin/gcc-ranlib16"
-      - "/var/lib/flatpak/exports/bin/gcc-ranlib16"
-      - "/usr/lib/jvm/default/bin/gcc-ranlib16"
-      - "/usr/bin/site_perl/gcc-ranlib16"
-      - "/usr/bin/vendor_perl/gcc-ranlib16"
-      - "/usr/bin/core_perl/gcc-ranlib16"
-      - "/usr/lib/rustup/bin/gcc-ranlib16"
-    found: "/usr/bin/gcc-ranlib"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-  -
     kind: "try_compile-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
@@ -1324,8 +143,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-vNDKD8"
-      binary: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-vNDKD8"
+      source: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-LRWrCm"
+      binary: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-LRWrCm"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -1335,13 +154,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-vNDKD8'
+        Change Dir: '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-LRWrCm'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2d030/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_2d030.dir/build.make CMakeFiles/cmTC_2d030.dir/build
-        make[1]: Entering directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-vNDKD8'
-        Building C object CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a7a35/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_a7a35.dir/build.make CMakeFiles/cmTC_a7a35.dir/build
+        make[1]: Entering directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-LRWrCm'
+        Building C object CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         Target: x86_64-pc-linux-gnu
@@ -1349,8 +168,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 16.1.1 20260430 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2d030.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_2d030.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccn8zgdz.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a7a35.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a7a35.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccD2Aaiq.s
         GNU C23 (GCC) version 16.1.1 20260430 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 16.1.1 20260430, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.27-GMP
         
@@ -1364,14 +183,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: d640c2d0cc84ebd71ee43ed7e2df63fb
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2d030.dir/'
-         as -v --64 -o CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o /tmp/ccn8zgdz.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a7a35.dir/'
+         as -v --64 -o CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o /tmp/ccD2Aaiq.s
         GNU assembler version 2.46.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.46.0
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_2d030
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d030.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_a7a35
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7a35.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper
@@ -1382,14 +201,14 @@ events:
         gcc version 16.1.1 20260430 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2d030' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_2d030.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoozvfi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_2d030 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a7a35' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a7a35.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPeFUVD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_a7a35 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o
         collect2 version 16.1.1 20260430
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoozvfi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_2d030 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPeFUVD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_a7a35 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.46.0
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2d030' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_2d030.'
-        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o -o cmTC_2d030
-        make[1]: Leaving directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-vNDKD8'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a7a35' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a7a35.'
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o -o cmTC_a7a35
+        make[1]: Leaving directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-LRWrCm'
         
       exitCode: 0
   -
@@ -1422,13 +241,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-vNDKD8']
+        ignore line: [Change Dir: '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-LRWrCm']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2d030/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_2d030.dir/build.make CMakeFiles/cmTC_2d030.dir/build]
-        ignore line: [make[1]: Entering directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-vNDKD8']
-        ignore line: [Building C object CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a7a35/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_a7a35.dir/build.make CMakeFiles/cmTC_a7a35.dir/build]
+        ignore line: [make[1]: Entering directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-LRWrCm']
+        ignore line: [Building C object CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -1436,8 +255,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 16.1.1 20260430 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2d030.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_2d030.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccn8zgdz.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a7a35.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a7a35.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccD2Aaiq.s]
         ignore line: [GNU C23 (GCC) version 16.1.1 20260430 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 16.1.1 20260430  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1451,14 +270,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: d640c2d0cc84ebd71ee43ed7e2df63fb]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2d030.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o /tmp/ccn8zgdz.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a7a35.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o /tmp/ccD2Aaiq.s]
         ignore line: [GNU assembler version 2.46.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.46.0]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_2d030]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d030.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_a7a35]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7a35.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper]
@@ -1469,13 +288,13 @@ events:
         ignore line: [gcc version 16.1.1 20260430 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2d030' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_2d030.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoozvfi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_2d030 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a7a35' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a7a35.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPeFUVD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_a7a35 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccoozvfi.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccPeFUVD.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
           arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
@@ -1491,7 +310,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_2d030] ==> ignore
+          arg [cmTC_a7a35] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o]
@@ -1503,7 +322,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
           arg [-latomic_asneeded] ==> lib [atomic_asneeded]
@@ -1513,7 +332,7 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o]
         ignore line: [collect2 version 16.1.1 20260430]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoozvfi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_2d030 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_2d030.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPeFUVD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_a7a35 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_a7a35.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o]
         linker tool for 'C': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
@@ -1550,8 +369,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-gR8vCj"
-      binary: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-gR8vCj"
+      source: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-hOWQ8b"
+      binary: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-hOWQ8b"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1562,13 +381,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-gR8vCj'
+        Change Dir: '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-hOWQ8b'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4c0f0/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_4c0f0.dir/build.make CMakeFiles/cmTC_4c0f0.dir/build
-        make[1]: Entering directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-gR8vCj'
-        Building CXX object CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_89fa5/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_89fa5.dir/build.make CMakeFiles/cmTC_89fa5.dir/build
+        make[1]: Entering directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-hOWQ8b'
+        Building CXX object CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         Target: x86_64-pc-linux-gnu
@@ -1576,8 +395,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 16.1.1 20260430 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4c0f0.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4c0f0.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccxnVs9z.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_89fa5.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_89fa5.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccydS9Pk.s
         GNU C++20 (GCC) version 16.1.1 20260430 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 16.1.1 20260430, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.27-GMP
         
@@ -1594,14 +413,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: d47d0c990a24bc0dbaf3bd00656bd5f3
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4c0f0.dir/'
-         as -v --64 -o CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccxnVs9z.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_89fa5.dir/'
+         as -v --64 -o CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccydS9Pk.s
         GNU assembler version 2.46.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.46.0
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_4c0f0
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c0f0.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_89fa5
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89fa5.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper
@@ -1612,14 +431,14 @@ events:
         gcc version 16.1.1 20260430 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4c0f0' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_4c0f0.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOb7lpl.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_4c0f0 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_89fa5' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_89fa5.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbletKt.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_89fa5 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o
         collect2 version 16.1.1 20260430
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOb7lpl.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_4c0f0 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbletKt.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_89fa5 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.46.0
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4c0f0' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_4c0f0.'
-        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_4c0f0
-        make[1]: Leaving directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-gR8vCj'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_89fa5' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_89fa5.'
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_89fa5
+        make[1]: Leaving directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-hOWQ8b'
         
       exitCode: 0
   -
@@ -1658,13 +477,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-gR8vCj']
+        ignore line: [Change Dir: '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-hOWQ8b']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4c0f0/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_4c0f0.dir/build.make CMakeFiles/cmTC_4c0f0.dir/build]
-        ignore line: [make[1]: Entering directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-gR8vCj']
-        ignore line: [Building CXX object CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_89fa5/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_89fa5.dir/build.make CMakeFiles/cmTC_89fa5.dir/build]
+        ignore line: [make[1]: Entering directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-hOWQ8b']
+        ignore line: [Building CXX object CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -1672,8 +491,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 16.1.1 20260430 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4c0f0.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4c0f0.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccxnVs9z.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_89fa5.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_89fa5.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccydS9Pk.s]
         ignore line: [GNU C++20 (GCC) version 16.1.1 20260430 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 16.1.1 20260430  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1690,14 +509,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: d47d0c990a24bc0dbaf3bd00656bd5f3]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4c0f0.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccxnVs9z.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_89fa5.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccydS9Pk.s]
         ignore line: [GNU assembler version 2.46.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.46.0]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_4c0f0]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c0f0.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_89fa5]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89fa5.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper]
@@ -1708,13 +527,13 @@ events:
         ignore line: [gcc version 16.1.1 20260430 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4c0f0' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_4c0f0.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOb7lpl.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_4c0f0 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_89fa5' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_89fa5.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbletKt.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_89fa5 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccOb7lpl.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccbletKt.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
@@ -1730,7 +549,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_4c0f0] ==> ignore
+          arg [cmTC_89fa5] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o]
@@ -1742,7 +561,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1754,7 +573,7 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o]
         ignore line: [collect2 version 16.1.1 20260430]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOb7lpl.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_4c0f0 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_4c0f0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbletKt.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_89fa5 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_89fa5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o]
         linker tool for 'CXX': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
@@ -1782,13 +601,383 @@ events:
     message: |
       Running the CXX compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils) 2.46.0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:148 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAS_HIP"
+    directories:
+      source: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-GPPfy2"
+      binary: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-GPPfy2"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/me/development/MIOpen-vk/cmake"
+    buildResult:
+      variable: "HAS_HIP"
+      cached: true
+      stdout: |
+        Change Dir: '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-GPPfy2'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2ff94/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_2ff94.dir/build.make CMakeFiles/cmTC_2ff94.dir/build
+        make[1]: Entering directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-GPPfy2'
+        Building CXX object CMakeFiles/cmTC_2ff94.dir/src.cxx.o
+        /usr/bin/c++ -DHAS_HIP  -std=c++20   --cuda-host-only -x hip -o CMakeFiles/cmTC_2ff94.dir/src.cxx.o -c /home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-GPPfy2/src.cxx
+        c++: error: unrecognized command-line option '--cuda-host-only'
+        make[1]: *** [CMakeFiles/cmTC_2ff94.dir/build.make:81: CMakeFiles/cmTC_2ff94.dir/src.cxx.o] Error 1
+        make[1]: Leaving directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-GPPfy2'
+        make: *** [Makefile:134: cmTC_2ff94/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "cmake/CheckCXXLinkerFlag.cmake:59 (check_cxx_source_compiles)"
+      - "CMakeLists.txt:158 (check_cxx_linker_flag)"
+    checks:
+      - "Performing Test _HAS_LIB_STD_FILESYSTEM"
+    directories:
+      source: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-3sAg5w"
+      binary: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-3sAg5w"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/me/development/MIOpen-vk/cmake"
+    buildResult:
+      variable: "_HAS_LIB_STD_FILESYSTEM"
+      cached: true
+      stdout: |
+        Change Dir: '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-3sAg5w'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ef86e/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_ef86e.dir/build.make CMakeFiles/cmTC_ef86e.dir/build
+        make[1]: Entering directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-3sAg5w'
+        Building CXX object CMakeFiles/cmTC_ef86e.dir/src.cxx.o
+        /usr/bin/c++ -D_HAS_LIB_STD_FILESYSTEM  -std=c++20 -o CMakeFiles/cmTC_ef86e.dir/src.cxx.o -c /home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-3sAg5w/src.cxx
+        Linking CXX executable cmTC_ef86e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef86e.dir/link.txt --verbose=1
+        /usr/bin/c++ -lstdc++fs CMakeFiles/cmTC_ef86e.dir/src.cxx.o -o cmTC_ef86e
+        make[1]: Leaving directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-3sAg5w'
+        
+      exitCode: 0
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:350 (find_package)"
+    name: "composable_kernel"
+    components:
+      -
+        name: "device_conv_operations"
+        required: true
+        found: false
+    configs:
+      -
+        filename: "composable_kernel.cps"
+        kind: "cps"
+      -
+        filename: "composable_kernelConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "composable_kernel-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.0.0"
+      version_complete: "1.0.0"
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "composable_kernel"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/me/.local/lib/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/me/.local/lib/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/me/.local/lib/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/me/.local/lib/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/me/.local/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/me/.local/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/me/.local/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/me/.local/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/me/miniforge3/condabin/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/me/miniforge3/condabin/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/me/miniforge3/condabin/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/me/miniforge3/condabin/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/var/lib/flatpak/exports/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/var/lib/flatpak/exports/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/var/lib/flatpak/exports/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/var/lib/flatpak/exports/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/jvm/default/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/jvm/default/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/jvm/default/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/jvm/default/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/site_perl/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/site_perl/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/site_perl/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/site_perl/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/vendor_perl/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/vendor_perl/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/vendor_perl/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/vendor_perl/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/core_perl/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/core_perl/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/core_perl/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/core_perl/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/rustup/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/rustup/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/rustup/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/rustup/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/composable_kernelConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/composable_kernel-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/lib/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/share/cps/composable_kernel.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/home/me/.local/lib"
+        - "/home/me/.local/bin"
+        - "/home/me/miniforge3/condabin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/local/sbin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+        - "/usr/lib/rustup/bin"
+      CMAKE_INSTALL_PREFIX: "/opt/rocm"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/opt/rocm"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_MODULE_PATH:
+        - "/home/me/development/MIOpen-vk/cmake"
   -
     kind: "find-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CTest.cmake:171 (find_program)"
-      - "CMakeLists.txt:80 (include)"
+      - "CMakeLists.txt:358 (find_program)"
     mode: "program"
-    variable: "GITCOMMAND"
+    variable: "HIP_OC_COMPILER"
     description: "Path to a program."
     settings:
       SearchFramework: "NEVER"
@@ -1799,47 +988,156 @@ events:
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "git"
+      - "amdclang"
+      - "clang"
     candidate_directories:
+      - "/home/me/.local/lib/bin/"
       - "/home/me/.local/lib/"
+      - "/home/me/.local/bin/bin/"
       - "/home/me/.local/bin/"
+      - "/home/me/miniforge3/condabin/bin/"
       - "/home/me/miniforge3/condabin/"
+      - "/usr/local/bin/bin/"
       - "/usr/local/bin/"
+      - "/usr/bin/bin/"
       - "/usr/bin/"
+      - "/bin/bin/"
       - "/bin/"
+      - "/usr/local/sbin/bin/"
       - "/usr/local/sbin/"
+      - "/var/lib/flatpak/exports/bin/bin/"
       - "/var/lib/flatpak/exports/bin/"
+      - "/usr/lib/jvm/default/bin/bin/"
       - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/bin/"
       - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/bin/"
       - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/bin/"
       - "/usr/bin/core_perl/"
+      - "/usr/lib/rustup/bin/bin/"
       - "/usr/lib/rustup/bin/"
+      - "/usr/local/bin/bin/"
       - "/usr/local/bin/"
+      - "/usr/local/sbin/bin/"
       - "/usr/local/sbin/"
+      - "/usr/local/bin/"
       - "/usr/local/"
+      - "/usr/bin/bin/"
       - "/usr/bin/"
+      - "/usr/sbin/bin/"
       - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/"
+      - "/bin/bin/"
       - "/bin/"
+      - "/sbin/bin/"
       - "/sbin/"
+      - "/opt/rocm/bin/bin/"
       - "/opt/rocm/bin/"
+      - "/opt/rocm/sbin/bin/"
       - "/opt/rocm/sbin/"
+      - "/opt/rocm/bin/"
       - "/opt/rocm/"
+      - "/usr/X11R6/bin/bin/"
       - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/bin/"
       - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/bin/"
       - "/usr/X11R6/"
+      - "/usr/pkg/bin/bin/"
       - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/bin/"
       - "/usr/pkg/sbin/"
+      - "/usr/pkg/bin/"
       - "/usr/pkg/"
+      - "/opt/bin/bin/"
       - "/opt/bin/"
+      - "/opt/sbin/bin/"
       - "/opt/sbin/"
+      - "/opt/bin/"
       - "/opt/"
+      - "/opt/rocm/bin/"
+      - "/opt/rocm/"
     searched_directories:
-      - "/home/me/.local/lib/git"
-      - "/home/me/.local/bin/git"
-      - "/home/me/miniforge3/condabin/git"
-      - "/usr/local/bin/git"
-    found: "/usr/bin/git"
+      - "/home/me/.local/lib/bin/amdclang"
+      - "/home/me/.local/lib/amdclang"
+      - "/home/me/.local/bin/bin/amdclang"
+      - "/home/me/.local/bin/amdclang"
+      - "/home/me/miniforge3/condabin/bin/amdclang"
+      - "/home/me/miniforge3/condabin/amdclang"
+      - "/usr/local/bin/bin/amdclang"
+      - "/usr/local/bin/amdclang"
+      - "/usr/bin/bin/amdclang"
+      - "/usr/bin/amdclang"
+      - "/bin/bin/amdclang"
+      - "/bin/amdclang"
+      - "/usr/local/sbin/bin/amdclang"
+      - "/usr/local/sbin/amdclang"
+      - "/var/lib/flatpak/exports/bin/bin/amdclang"
+      - "/var/lib/flatpak/exports/bin/amdclang"
+      - "/usr/lib/jvm/default/bin/bin/amdclang"
+      - "/usr/lib/jvm/default/bin/amdclang"
+      - "/usr/bin/site_perl/bin/amdclang"
+      - "/usr/bin/site_perl/amdclang"
+      - "/usr/bin/vendor_perl/bin/amdclang"
+      - "/usr/bin/vendor_perl/amdclang"
+      - "/usr/bin/core_perl/bin/amdclang"
+      - "/usr/bin/core_perl/amdclang"
+      - "/usr/lib/rustup/bin/bin/amdclang"
+      - "/usr/lib/rustup/bin/amdclang"
+      - "/usr/local/bin/bin/amdclang"
+      - "/usr/local/bin/amdclang"
+      - "/usr/local/sbin/bin/amdclang"
+      - "/usr/local/sbin/amdclang"
+      - "/usr/local/bin/amdclang"
+      - "/usr/local/amdclang"
+      - "/usr/bin/bin/amdclang"
+      - "/usr/bin/amdclang"
+      - "/usr/sbin/bin/amdclang"
+      - "/usr/sbin/amdclang"
+      - "/usr/bin/amdclang"
+      - "/usr/amdclang"
+      - "/bin/bin/amdclang"
+      - "/bin/amdclang"
+      - "/sbin/bin/amdclang"
+      - "/sbin/amdclang"
+      - "/opt/rocm/bin/bin/amdclang"
+      - "/opt/rocm/bin/amdclang"
+      - "/opt/rocm/sbin/bin/amdclang"
+      - "/opt/rocm/sbin/amdclang"
+      - "/opt/rocm/bin/amdclang"
+      - "/opt/rocm/amdclang"
+      - "/usr/X11R6/bin/bin/amdclang"
+      - "/usr/X11R6/bin/amdclang"
+      - "/usr/X11R6/sbin/bin/amdclang"
+      - "/usr/X11R6/sbin/amdclang"
+      - "/usr/X11R6/bin/amdclang"
+      - "/usr/X11R6/amdclang"
+      - "/usr/pkg/bin/bin/amdclang"
+      - "/usr/pkg/bin/amdclang"
+      - "/usr/pkg/sbin/bin/amdclang"
+      - "/usr/pkg/sbin/amdclang"
+      - "/usr/pkg/bin/amdclang"
+      - "/usr/pkg/amdclang"
+      - "/opt/bin/bin/amdclang"
+      - "/opt/bin/amdclang"
+      - "/opt/sbin/bin/amdclang"
+      - "/opt/sbin/amdclang"
+      - "/opt/bin/amdclang"
+      - "/opt/amdclang"
+      - "/opt/rocm/bin/amdclang"
+      - "/opt/rocm/amdclang"
+      - "/home/me/.local/lib/bin/clang"
+      - "/home/me/.local/lib/clang"
+      - "/home/me/.local/bin/bin/clang"
+      - "/home/me/.local/bin/clang"
+      - "/home/me/miniforge3/condabin/bin/clang"
+      - "/home/me/miniforge3/condabin/clang"
+      - "/usr/local/bin/bin/clang"
+      - "/usr/local/bin/clang"
+      - "/usr/bin/bin/clang"
+    found: "/usr/bin/clang"
     search_context:
       ENV{PATH}:
         - "/home/me/.local/lib"
@@ -1865,427 +1163,22 @@ events:
         - "/usr/X11R6"
         - "/usr/pkg"
         - "/opt"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CTest.cmake:188 (find_program)"
-      - "CMakeLists.txt:80 (include)"
-    mode: "program"
-    variable: "MEMORYCHECK_COMMAND"
-    description: "Path to the memory checking command, used for memory error detection."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "purify"
-      - "valgrind"
-      - "boundscheck"
-      - "drmemory"
-      - "cuda-memcheck"
-      - "compute-sanitizer"
-    candidate_directories:
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-      - "/usr/local/bin/"
-      - "/usr/local/sbin/"
-      - "/usr/local/"
-      - "/usr/bin/"
-      - "/usr/sbin/"
-      - "/usr/"
-      - "/bin/"
-      - "/sbin/"
-      - "/opt/rocm/bin/"
-      - "/opt/rocm/sbin/"
-      - "/opt/rocm/"
-      - "/usr/X11R6/bin/"
-      - "/usr/X11R6/sbin/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/bin/"
-      - "/usr/pkg/sbin/"
-      - "/usr/pkg/"
-      - "/opt/bin/"
-      - "/opt/sbin/"
-      - "/opt/"
-    searched_directories:
-      - "/home/me/.local/lib/purify"
-      - "/home/me/.local/bin/purify"
-      - "/home/me/miniforge3/condabin/purify"
-      - "/usr/local/bin/purify"
-      - "/usr/bin/purify"
-      - "/bin/purify"
-      - "/usr/local/sbin/purify"
-      - "/var/lib/flatpak/exports/bin/purify"
-      - "/usr/lib/jvm/default/bin/purify"
-      - "/usr/bin/site_perl/purify"
-      - "/usr/bin/vendor_perl/purify"
-      - "/usr/bin/core_perl/purify"
-      - "/usr/lib/rustup/bin/purify"
-      - "/usr/local/bin/purify"
-      - "/usr/local/sbin/purify"
-      - "/usr/local/purify"
-      - "/usr/bin/purify"
-      - "/usr/sbin/purify"
-      - "/usr/purify"
-      - "/bin/purify"
-      - "/sbin/purify"
-      - "/opt/rocm/bin/purify"
-      - "/opt/rocm/sbin/purify"
-      - "/opt/rocm/purify"
-      - "/usr/X11R6/bin/purify"
-      - "/usr/X11R6/sbin/purify"
-      - "/usr/X11R6/purify"
-      - "/usr/pkg/bin/purify"
-      - "/usr/pkg/sbin/purify"
-      - "/usr/pkg/purify"
-      - "/opt/bin/purify"
-      - "/opt/sbin/purify"
-      - "/opt/purify"
-      - "/home/me/.local/lib/valgrind"
-      - "/home/me/.local/bin/valgrind"
-      - "/home/me/miniforge3/condabin/valgrind"
-      - "/usr/local/bin/valgrind"
-      - "/usr/bin/valgrind"
-      - "/bin/valgrind"
-      - "/usr/local/sbin/valgrind"
-      - "/var/lib/flatpak/exports/bin/valgrind"
-      - "/usr/lib/jvm/default/bin/valgrind"
-      - "/usr/bin/site_perl/valgrind"
-      - "/usr/bin/vendor_perl/valgrind"
-      - "/usr/bin/core_perl/valgrind"
-      - "/usr/lib/rustup/bin/valgrind"
-      - "/usr/local/bin/valgrind"
-      - "/usr/local/sbin/valgrind"
-      - "/usr/local/valgrind"
-      - "/usr/bin/valgrind"
-      - "/usr/sbin/valgrind"
-      - "/usr/valgrind"
-      - "/bin/valgrind"
-      - "/sbin/valgrind"
-      - "/opt/rocm/bin/valgrind"
-      - "/opt/rocm/sbin/valgrind"
-      - "/opt/rocm/valgrind"
-      - "/usr/X11R6/bin/valgrind"
-      - "/usr/X11R6/sbin/valgrind"
-      - "/usr/X11R6/valgrind"
-      - "/usr/pkg/bin/valgrind"
-      - "/usr/pkg/sbin/valgrind"
-      - "/usr/pkg/valgrind"
-      - "/opt/bin/valgrind"
-      - "/opt/sbin/valgrind"
-      - "/opt/valgrind"
-      - "/home/me/.local/lib/boundscheck"
-      - "/home/me/.local/bin/boundscheck"
-      - "/home/me/miniforge3/condabin/boundscheck"
-      - "/usr/local/bin/boundscheck"
-      - "/usr/bin/boundscheck"
-      - "/bin/boundscheck"
-      - "/usr/local/sbin/boundscheck"
-      - "/var/lib/flatpak/exports/bin/boundscheck"
-      - "/usr/lib/jvm/default/bin/boundscheck"
-      - "/usr/bin/site_perl/boundscheck"
-      - "/usr/bin/vendor_perl/boundscheck"
-      - "/usr/bin/core_perl/boundscheck"
-      - "/usr/lib/rustup/bin/boundscheck"
-      - "/usr/local/bin/boundscheck"
-      - "/usr/local/sbin/boundscheck"
-      - "/usr/local/boundscheck"
-      - "/usr/bin/boundscheck"
-      - "/usr/sbin/boundscheck"
-      - "/usr/boundscheck"
-      - "/bin/boundscheck"
-      - "/sbin/boundscheck"
-      - "/opt/rocm/bin/boundscheck"
-      - "/opt/rocm/sbin/boundscheck"
-      - "/opt/rocm/boundscheck"
-      - "/usr/X11R6/bin/boundscheck"
-      - "/usr/X11R6/sbin/boundscheck"
-      - "/usr/X11R6/boundscheck"
-      - "/usr/pkg/bin/boundscheck"
-      - "/usr/pkg/sbin/boundscheck"
-      - "/usr/pkg/boundscheck"
-      - "/opt/bin/boundscheck"
-      - "/opt/sbin/boundscheck"
-      - "/opt/boundscheck"
-      - "/home/me/.local/lib/drmemory"
-      - "/home/me/.local/bin/drmemory"
-      - "/home/me/miniforge3/condabin/drmemory"
-      - "/usr/local/bin/drmemory"
-      - "/usr/bin/drmemory"
-      - "/bin/drmemory"
-      - "/usr/local/sbin/drmemory"
-      - "/var/lib/flatpak/exports/bin/drmemory"
-      - "/usr/lib/jvm/default/bin/drmemory"
-      - "/usr/bin/site_perl/drmemory"
-      - "/usr/bin/vendor_perl/drmemory"
-      - "/usr/bin/core_perl/drmemory"
-      - "/usr/lib/rustup/bin/drmemory"
-      - "/usr/local/bin/drmemory"
-      - "/usr/local/sbin/drmemory"
-      - "/usr/local/drmemory"
-      - "/usr/bin/drmemory"
-      - "/usr/sbin/drmemory"
-      - "/usr/drmemory"
-      - "/bin/drmemory"
-      - "/sbin/drmemory"
-      - "/opt/rocm/bin/drmemory"
-      - "/opt/rocm/sbin/drmemory"
-      - "/opt/rocm/drmemory"
-      - "/usr/X11R6/bin/drmemory"
-      - "/usr/X11R6/sbin/drmemory"
-      - "/usr/X11R6/drmemory"
-      - "/usr/pkg/bin/drmemory"
-      - "/usr/pkg/sbin/drmemory"
-      - "/usr/pkg/drmemory"
-      - "/opt/bin/drmemory"
-      - "/opt/sbin/drmemory"
-      - "/opt/drmemory"
-      - "/home/me/.local/lib/cuda-memcheck"
-      - "/home/me/.local/bin/cuda-memcheck"
-      - "/home/me/miniforge3/condabin/cuda-memcheck"
-      - "/usr/local/bin/cuda-memcheck"
-      - "/usr/bin/cuda-memcheck"
-      - "/bin/cuda-memcheck"
-      - "/usr/local/sbin/cuda-memcheck"
-      - "/var/lib/flatpak/exports/bin/cuda-memcheck"
-      - "/usr/lib/jvm/default/bin/cuda-memcheck"
-      - "/usr/bin/site_perl/cuda-memcheck"
-      - "/usr/bin/vendor_perl/cuda-memcheck"
-      - "/usr/bin/core_perl/cuda-memcheck"
-      - "/usr/lib/rustup/bin/cuda-memcheck"
-      - "/usr/local/bin/cuda-memcheck"
-      - "/usr/local/sbin/cuda-memcheck"
-      - "/usr/local/cuda-memcheck"
-      - "/usr/bin/cuda-memcheck"
-      - "/usr/sbin/cuda-memcheck"
-      - "/usr/cuda-memcheck"
-      - "/bin/cuda-memcheck"
-      - "/sbin/cuda-memcheck"
-      - "/opt/rocm/bin/cuda-memcheck"
-      - "/opt/rocm/sbin/cuda-memcheck"
-      - "/opt/rocm/cuda-memcheck"
-      - "/usr/X11R6/bin/cuda-memcheck"
-      - "/usr/X11R6/sbin/cuda-memcheck"
-      - "/usr/X11R6/cuda-memcheck"
-      - "/usr/pkg/bin/cuda-memcheck"
-      - "/usr/pkg/sbin/cuda-memcheck"
-      - "/usr/pkg/cuda-memcheck"
-      - "/opt/bin/cuda-memcheck"
-      - "/opt/sbin/cuda-memcheck"
-      - "/opt/cuda-memcheck"
-      - "/home/me/.local/lib/compute-sanitizer"
-      - "/home/me/.local/bin/compute-sanitizer"
-      - "/home/me/miniforge3/condabin/compute-sanitizer"
-      - "/usr/local/bin/compute-sanitizer"
-      - "/usr/bin/compute-sanitizer"
-      - "/bin/compute-sanitizer"
-      - "/usr/local/sbin/compute-sanitizer"
-      - "/var/lib/flatpak/exports/bin/compute-sanitizer"
-      - "/usr/lib/jvm/default/bin/compute-sanitizer"
-      - "/usr/bin/site_perl/compute-sanitizer"
-      - "/usr/bin/vendor_perl/compute-sanitizer"
-      - "/usr/bin/core_perl/compute-sanitizer"
-      - "/usr/lib/rustup/bin/compute-sanitizer"
-      - "/usr/local/bin/compute-sanitizer"
-      - "/usr/local/sbin/compute-sanitizer"
-      - "/usr/local/compute-sanitizer"
-      - "/usr/bin/compute-sanitizer"
-      - "/usr/sbin/compute-sanitizer"
-      - "/usr/compute-sanitizer"
-      - "/bin/compute-sanitizer"
-      - "/sbin/compute-sanitizer"
-      - "/opt/rocm/bin/compute-sanitizer"
-      - "/opt/rocm/sbin/compute-sanitizer"
-      - "/opt/rocm/compute-sanitizer"
-      - "/usr/X11R6/bin/compute-sanitizer"
-      - "/usr/X11R6/sbin/compute-sanitizer"
-      - "/usr/X11R6/compute-sanitizer"
-      - "/usr/pkg/bin/compute-sanitizer"
-      - "/usr/pkg/sbin/compute-sanitizer"
-      - "/usr/pkg/compute-sanitizer"
-      - "/opt/bin/compute-sanitizer"
-      - "/opt/sbin/compute-sanitizer"
-      - "/opt/compute-sanitizer"
-    found: false
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/opt/rocm"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CTest.cmake:196 (find_program)"
-      - "CMakeLists.txt:80 (include)"
-    mode: "program"
-    variable: "COVERAGE_COMMAND"
-    description: "Path to the coverage program that CTest uses for performing coverage inspection"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "gcov"
-    candidate_directories:
-      - "/home/me/.local/lib/"
-      - "/home/me/.local/bin/"
-      - "/home/me/miniforge3/condabin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/lib/rustup/bin/"
-      - "/usr/local/bin/"
-      - "/usr/local/sbin/"
-      - "/usr/local/"
-      - "/usr/bin/"
-      - "/usr/sbin/"
-      - "/usr/"
-      - "/bin/"
-      - "/sbin/"
-      - "/opt/rocm/bin/"
-      - "/opt/rocm/sbin/"
-      - "/opt/rocm/"
-      - "/usr/X11R6/bin/"
-      - "/usr/X11R6/sbin/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/bin/"
-      - "/usr/pkg/sbin/"
-      - "/usr/pkg/"
-      - "/opt/bin/"
-      - "/opt/sbin/"
-      - "/opt/"
-    searched_directories:
-      - "/home/me/.local/lib/gcov"
-      - "/home/me/.local/bin/gcov"
-      - "/home/me/miniforge3/condabin/gcov"
-      - "/usr/local/bin/gcov"
-    found: "/usr/bin/gcov"
-    search_context:
-      ENV{PATH}:
-        - "/home/me/.local/lib"
-        - "/home/me/.local/bin"
-        - "/home/me/miniforge3/condabin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-        - "/usr/lib/rustup/bin"
-      CMAKE_INSTALL_PREFIX: "/opt/rocm"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/opt/rocm"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
-      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
-      - "/usr/share/cmake/Modules/FindThreads.cmake:160 (check_c_source_compiles)"
-      - "/usr/share/cmake/Modules/FindThreads.cmake:226 (_threads_check_libc)"
-      - "CMakeLists.txt:82 (find_package)"
-    checks:
-      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
-    directories:
-      source: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-iMLefG"
-      binary: "/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-iMLefG"
-    cmakeVariables:
-      CMAKE_CXX_STDLIB_MODULES_JSON: ""
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "CMAKE_HAVE_LIBC_PTHREAD"
-      cached: true
-      stdout: |
-        Change Dir: '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-iMLefG'
-        
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a36d3/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_a36d3.dir/build.make CMakeFiles/cmTC_a36d3.dir/build
-        make[1]: Entering directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-iMLefG'
-        Building C object CMakeFiles/cmTC_a36d3.dir/src.c.o
-        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_a36d3.dir/src.c.o -c /home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-iMLefG/src.c
-        Linking C executable cmTC_a36d3
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a36d3.dir/link.txt --verbose=1
-        /usr/bin/cc CMakeFiles/cmTC_a36d3.dir/src.c.o -o cmTC_a36d3
-        make[1]: Leaving directory '/home/me/development/MIOpen-vk/CMakeFiles/CMakeScratch/TryCompile-iMLefG'
-        
-      exitCode: 0
   -
     kind: "find_package-v1"
     backtrace:
-      - "CMakeLists.txt:83 (find_package)"
-    name: "ROCM"
+      - "CMakeLists.txt:380 (find_package)"
+    name: "rocblas"
     configs:
       -
-        filename: "ROCM.cps"
+        filename: "rocblas.cps"
         kind: "cps"
       -
-        filename: "rocm.cps"
-        kind: "cps"
-      -
-        filename: "ROCMConfig.cmake"
+        filename: "rocblasConfig.cmake"
         kind: "cmake"
       -
-        filename: "rocm-config.cmake"
+        filename: "rocblas-config.cmake"
         kind: "cmake"
     version_request:
-      version: "0.7.3"
-      version_complete: "0.7.3"
       exact: false
     settings:
       required: "required_explicit"
@@ -2294,7 +1187,7 @@ events:
       policy_scope: true
       bypass_provider: false
       names:
-        - "ROCM"
+        - "rocblas"
       search_paths:
         - "/opt/rocm"
       path_suffixes:
@@ -2311,339 +1204,227 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/ROCMConfig.cmake"
+        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/rocm-config.cmake"
+        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/lib/cps/ROCM.cps"
+        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/lib/cps/rocm.cps"
+        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/me/development/MIOpen-vk/CMakeFiles/pkgRedirects/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/me/.local/lib/ROCMConfig.cmake"
+        path: "/home/me/.local/lib/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/me/.local/lib/rocm-config.cmake"
+        path: "/home/me/.local/lib/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/me/.local/lib/lib/cps/ROCM.cps"
+        path: "/home/me/.local/lib/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/me/.local/lib/lib/cps/rocm.cps"
+        path: "/home/me/.local/lib/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/me/.local/lib/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/me/.local/lib/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/me/.local/ROCMConfig.cmake"
+        path: "/home/me/.local/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/me/.local/rocm-config.cmake"
+        path: "/home/me/.local/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/me/.local/lib/cps/ROCM.cps"
+        path: "/home/me/.local/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/me/.local/lib/cps/rocm.cps"
+        path: "/home/me/.local/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/me/.local/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/me/.local/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/me/miniforge3/condabin/ROCMConfig.cmake"
+        path: "/home/me/miniforge3/condabin/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/me/miniforge3/condabin/rocm-config.cmake"
+        path: "/home/me/miniforge3/condabin/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/me/miniforge3/condabin/lib/cps/ROCM.cps"
+        path: "/home/me/miniforge3/condabin/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/me/miniforge3/condabin/lib/cps/rocm.cps"
+        path: "/home/me/miniforge3/condabin/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/me/miniforge3/condabin/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/home/me/miniforge3/condabin/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/local/ROCMConfig.cmake"
+        path: "/usr/local/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/local/rocm-config.cmake"
+        path: "/usr/local/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/local/lib/cps/ROCM.cps"
+        path: "/usr/local/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/local/lib/cps/rocm.cps"
+        path: "/usr/local/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/local/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/local/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/ROCMConfig.cmake"
+        path: "/usr/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/rocm-config.cmake"
+        path: "/usr/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/lib/cps/ROCM.cps"
+        path: "/usr/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/lib/cps/rocm.cps"
+        path: "/usr/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/ROCMConfig.cmake"
+        path: "/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/rocm-config.cmake"
+        path: "/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/lib/cps/ROCM.cps"
+        path: "/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/lib/cps/rocm.cps"
+        path: "/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/var/lib/flatpak/exports/ROCMConfig.cmake"
+        path: "/var/lib/flatpak/exports/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/var/lib/flatpak/exports/rocm-config.cmake"
+        path: "/var/lib/flatpak/exports/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/var/lib/flatpak/exports/lib/cps/ROCM.cps"
+        path: "/var/lib/flatpak/exports/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/var/lib/flatpak/exports/lib/cps/rocm.cps"
+        path: "/var/lib/flatpak/exports/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/var/lib/flatpak/exports/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/var/lib/flatpak/exports/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/lib/jvm/default/ROCMConfig.cmake"
+        path: "/usr/lib/jvm/default/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/lib/jvm/default/rocm-config.cmake"
+        path: "/usr/lib/jvm/default/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/lib/jvm/default/lib/cps/ROCM.cps"
+        path: "/usr/lib/jvm/default/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/lib/jvm/default/lib/cps/rocm.cps"
+        path: "/usr/lib/jvm/default/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/lib/jvm/default/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/lib/jvm/default/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/bin/site_perl/ROCMConfig.cmake"
+        path: "/usr/bin/site_perl/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/bin/site_perl/rocm-config.cmake"
+        path: "/usr/bin/site_perl/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/bin/site_perl/lib/cps/ROCM.cps"
+        path: "/usr/bin/site_perl/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/bin/site_perl/lib/cps/rocm.cps"
+        path: "/usr/bin/site_perl/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/bin/site_perl/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/bin/site_perl/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/bin/vendor_perl/ROCMConfig.cmake"
+        path: "/usr/bin/vendor_perl/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/bin/vendor_perl/rocm-config.cmake"
+        path: "/usr/bin/vendor_perl/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/bin/vendor_perl/lib/cps/ROCM.cps"
+        path: "/usr/bin/vendor_perl/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/bin/vendor_perl/lib/cps/rocm.cps"
+        path: "/usr/bin/vendor_perl/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/bin/vendor_perl/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/bin/vendor_perl/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/bin/core_perl/ROCMConfig.cmake"
+        path: "/usr/bin/core_perl/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/bin/core_perl/rocm-config.cmake"
+        path: "/usr/bin/core_perl/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/bin/core_perl/lib/cps/ROCM.cps"
+        path: "/usr/bin/core_perl/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/bin/core_perl/lib/cps/rocm.cps"
+        path: "/usr/bin/core_perl/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/bin/core_perl/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/bin/core_perl/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/lib/rustup/ROCMConfig.cmake"
+        path: "/usr/lib/rustup/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/lib/rustup/rocm-config.cmake"
+        path: "/usr/lib/rustup/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/usr/lib/rustup/lib/cps/ROCM.cps"
+        path: "/usr/lib/rustup/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/lib/rustup/lib/cps/rocm.cps"
+        path: "/usr/lib/rustup/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/usr/lib/rustup/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/usr/lib/rustup/share/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/opt/ROCMConfig.cmake"
+        path: "/opt/rocblasConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/opt/rocm-config.cmake"
+        path: "/opt/rocblas-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/opt/lib/cps/ROCM.cps"
+        path: "/opt/lib/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/opt/lib/cps/rocm.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/opt/share/cps/ROCM.cps"
-        mode: "cps"
-        reason: "no_exist"
-      -
-        path: "/opt/share/cps/rocm.cps"
+        path: "/opt/share/cps/rocblas.cps"
         mode: "cps"
         reason: "no_exist"
     found: null

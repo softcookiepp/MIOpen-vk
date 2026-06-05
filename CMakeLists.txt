@@ -130,7 +130,7 @@ if(MIOPEN_STRIP_SYMBOLS AND NOT WIN32 AND NOT APPLE)
     set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -s")
 endif()
 
-rocm_setup_version(VERSION 3.5.0)
+#rocm_setup_version(VERSION 3.5.0)
 
 list( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake )
 include(TargetFlags)
@@ -152,6 +152,7 @@ else()
     #set(MIOPEN_DEFAULT_BACKEND "OpenCL")
     set(MIOPEN_DEFAULT_BACKEND "Vulkan")
 endif()
+message(STATUS "Backend: ${MIOPEN_DEFAULT_BACKEND}")
 
 if(NOT WIN32 AND NOT MIOPEN_WORKAROUND_USE_BOOST_FILESYSTEM)
     include(CheckCXXLinkerFlag)
@@ -232,7 +233,7 @@ if( MIOPEN_BACKEND STREQUAL "OpenCL")
     # for device code compilation. Used within "find_package(hip...".
     # See https://github.com/ROCm-Developer-Tools/HIP/pull/2035#issuecomment-616861118.
     set (HIP_CXX_COMPILER ${MIOPEN_HIP_COMPILER})
-elseif( MIOPEN_BACKEND STREQUAL "OpenCL" )
+elseif( MIOPEN_BACKEND STREQUAL "Vulkan" )
 	# Vulkan stuff
 endif()
 
@@ -265,8 +266,8 @@ if( DEFINED MIOPEN_OVERRIDE_HIP_VERSION_PATCH )
 endif()
 
 # Depend on Composable Kernels
-option(MIOPEN_USE_COMPOSABLEKERNEL "Enable MIOpen to use composable kernels for various operations" On)
-if(MIOPEN_BACKEND_OPENCL)
+option(MIOPEN_USE_COMPOSABLEKERNEL "Enable MIOpen to use composable kernels for various operations" OFF)
+if(TRUE)#(MIOPEN_BACKEND_OPENCL OR MIOPEN_BACKEND_VULKAN)
     set(MIOPEN_USE_COMPOSABLEKERNEL OFF)
 endif()
 message(STATUS "Enable Composable Kernels: ${MIOPEN_USE_COMPOSABLEKERNEL}")
@@ -292,15 +293,15 @@ set_var_to_condition(MIOPEN_HIP_COMPILER_USE_SYSTEM_INCLUDE_DIRECTORIES_DEFAULT
 option(MIOPEN_HIP_COMPILER_USE_SYSTEM_INCLUDE_DIRECTORIES "Append include directories to compiler flags"
        ${MIOPEN_HIP_COMPILER_USE_SYSTEM_INCLUDE_DIRECTORIES_DEFAULT})
 
-target_flags(HIP_COMPILER_FLAGS hip::device)
+#target_flags(HIP_COMPILER_FLAGS hip::device)
 # Remove cuda arch flags
-string(REGEX REPLACE --cuda-gpu-arch=[a-z0-9]+ "" HIP_COMPILER_FLAGS "${HIP_COMPILER_FLAGS}")
-string(REGEX REPLACE --offload-arch=[a-z0-9:+-]+ "" HIP_COMPILER_FLAGS "${HIP_COMPILER_FLAGS}")
+#string(REGEX REPLACE --cuda-gpu-arch=[a-z0-9]+ "" HIP_COMPILER_FLAGS "${HIP_COMPILER_FLAGS}")
+#string(REGEX REPLACE --offload-arch=[a-z0-9:+-]+ "" HIP_COMPILER_FLAGS "${HIP_COMPILER_FLAGS}")
 # Skip library paths since hip will incorrectly treat it as a source file
-string(APPEND HIP_COMPILER_FLAGS " ")
-foreach(_unused RANGE 2)
-    string(REGEX REPLACE " /[^ ]+\\.(a|so) " " " HIP_COMPILER_FLAGS "${HIP_COMPILER_FLAGS}")
-endforeach()
+#string(APPEND HIP_COMPILER_FLAGS " ")
+#foreach(_unused RANGE 2)
+#    string(REGEX REPLACE " /[^ ]+\\.(a|so) " " " HIP_COMPILER_FLAGS "${HIP_COMPILER_FLAGS}")
+#endforeach()
 
 # WORKAROUND_SWDEV_413293
 # Assume that any HIP kernel can be launched with non-uniform block size; otherwise
@@ -598,6 +599,8 @@ elseif(MIOPEN_BACKEND STREQUAL "OpenCL")
     # Make backends explicitly conflict
     set(CPACK_DEBIAN_PACKAGE_CONFLICTS miopen-hip)
     set(CPACK_RPM_PACKAGE_CONFLICTS miopen-hip)
+elseif (MIOPEN_BACKEND STREQUAL "Vulkan")
+	
 endif()
 
 set(KERNELS_SOURCE_DIR ${PROJECT_SOURCE_DIR}/src/kernels)
